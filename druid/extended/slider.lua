@@ -105,11 +105,11 @@ function Slider.on_input(self, action_id, action)
 		if prev_x ~= self.target_pos.x or prev_y ~= self.target_pos.y then
 			local prev_value = self.value
 
-			if self.dist.x > 0 then
+			if math.abs(self.dist.x) > 0 then
 				self.value = (self.target_pos.x - self.start_pos.x) / self.dist.x
 			end
 
-			if self.dist.y > 0 then
+			if math.abs(self.dist.y) > 0 then
 				self.value = (self.target_pos.y - self.start_pos.y) / self.dist.y
 			end
 
